@@ -1,0 +1,35 @@
+# first run the command: all commands in # will be ignored
+
+sudo dpkg -i /home/qwiklab/downloads/sublime-text_build-3211_amd64.deb
+
+#output
+Selecting previously unselected package sublime-text.
+(Reading database ... 36788 files and directories currently installed.)
+Preparing to unpack .../sublime-text_build-3211_amd64.deb ...
+Unpacking sublime-text (3211) ...
+dpkg: dependency problems prevent configuration of sublime-text:
+ sublime-text depends on libgtk-3-0; however:
+  Package libgtk-3-0 is not installed.
+
+dpkg: error processing package sublime-text (--install):
+ dependency problems - leaving unconfigured
+Processing triggers for mime-support (3.62) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Errors were encountered while processing:
+ sublime-text
+
+#Error encountered due to sublimetext dependency will be fixed by running this command using the apt. 
+sudo apt install -f
+
+#confirm installation
+dpkg -s sublime-text
+
+#output
+Package: sublime-text
+Status: install ok installed
+Priority: optional
+Section: editors
+Installed-Size: 34033
+Maintainer: Sublime HQ Pty Ltd 
+Architecture: amd64
+Version: .......

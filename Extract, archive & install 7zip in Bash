@@ -1,0 +1,19 @@
+#Extract archive from the download. use cd~ to go to the correct path. Use pwd to verify path  you are in. ALL command in # will be ignored
+cd /home/Users/downloads
+sudo tar -xvf extract_me.tar
+#output
+
+#Archive. first go back to first directory
+cd ~
+tar -cvf Planets.tar --absolute-names /home/Users/documents/Earth \ /home/Users/documents/Mercury /home/Users/documents/Venus
+#outout will be added to path
+
+#install 7zip
+sudo apt install p7zip-full
+
+#confirm Y/N: Y to install
+#verify 
+dpkg -s p7zip-full
+
+#unistall 7ZIP
+sudo apt remove 7zip
